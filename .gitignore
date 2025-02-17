@@ -11,6 +11,9 @@
 npm-debug.log
 yarn-error.log
 
+# firebase
+/src/environments/environment.secret.ts
+
 # IDEs and editors
 .idea/
 .project
