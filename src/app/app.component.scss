@@ -1,35 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
-body {
-    font-family: 'Roboto', sans-serif;
+/* filepath: /E:/Development/angular-firebase-realtime-user-count/src/app/app.component.scss */
+header {
+  background-color: #6a1b9a;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f3f3f3;
+nav {
+  display: flex;
+  justify-content: center;
 }
 
-.card {
-    background-color: #6a1b9a;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
-.card h1 {
-    margin: 0;
-    font-size: 2em;
-    font-weight: 700;
+li {
+  margin: 0 15px;
 }
 
-.card p {
-    margin: 10px 0 0;
-    font-size: 3em;
-    font-weight: 700;
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+a:hover,
+a.active {
+  color: #ffeb3b;
 }

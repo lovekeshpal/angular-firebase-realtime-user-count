@@ -1,6 +1,11 @@
-<div class="container">
-    <div class="card">
-        <h1>Realtime User Count</h1>
-        <p>{{ userCount }}</p>
-    </div>
-</div>
+<header>
+  <nav>
+    <ul>
+      <li><a routerLink="/home" routerLinkActive="active" (click)="onNavClick('home')">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="onNavClick('about')">About</a></li>
+      <li><a routerLink="/user-count" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          (click)="onNavClick('user-count')">User Count</a></li>
+    </ul>
+  </nav>
+</header>
+<router-outlet></router-outlet>
