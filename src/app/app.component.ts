@@ -14,9 +14,11 @@ export class AppComponent {
   sessionKey: string = '';
 
   ngOnInit() {
-    this.sessionKey = uuidv4(); // Generate a unique key for this session
+    // Check if a session key already exists in local storage
+    this.sessionKey = localStorage.getItem('firebase-session-key') || uuidv4();
+    localStorage.setItem('firebase-session-key', this.sessionKey); // Store the session key in local storage
+
     const db = getDatabase();
-    const userCountRef = ref(db, 'userCount');
     const userSessionRef = ref(db, `sessions/${this.sessionKey}`);
 
     // Listen for changes in the user count
@@ -31,5 +33,4 @@ export class AppComponent {
       onDisconnect(userSessionRef).remove();
     });
   }
-
 }
